@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index(Request $request){
-        $products = Product::all();
+        $products = Product::all()->toArray();
         return response()->json(['data'=>$products,'status'=>'200','message'=>'Data Sended Successfully']);
     }
 
