@@ -21,6 +21,7 @@ use App\Http\Controllers\ProductController;
 // dd('sdsd');
 Route::get('products',[ProductController::class,'index']);
 Route::post('add-product',[ProductController::class,'store']);
+Route::get('edit-product/{id}',[ProductController::class,'show']);
 Route::put('update-product/{id}',[ProductController::class,'update']);
 Route::delete('delete-product/{id}',[ProductController::class,'delete']);
 

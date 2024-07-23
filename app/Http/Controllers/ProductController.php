@@ -21,6 +21,10 @@ class ProductController extends Controller
         $product = Product::create($product);
         return response()->json(['data'=>$product,'status'=>'201','message'=>'Data Created Successfully']);
     }
+    public function Show($id){
+        $product = Product::find($id);
+        return response()->json(['data'=>$product,'status'=>'200','message'=>'Data Sended Successfully']);
+        }
     public function update(Request $request,$id){
         $product = [
             'product_title'=>isset($request->product_title) ? $request->product_title : '',
